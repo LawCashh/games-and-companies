@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "common/*": ["src/common/*"],
+      "pages/*": ["src/pages/*"],
+      "api": ["src/api/index.jsx"],
+      "shell/*": ["src/shell/*"],
+      "query/*": ["src/api/query/*"],
+      "@mutations/*": ["src/api/mutations/*"],
+      "@atoms/*": ["src/state/atoms/*"]
+    }
+  },
+  "include": ["src"]
+}

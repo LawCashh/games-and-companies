@@ -1,0 +1,42 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type AuthPayload {
+    token: String!
+    user: User!
+}
+
+type Company {
+    games: [Game]!
+    id: String
+    numOfEmployees: Int
+    title: String
+}
+
+type Game {
+    company: Company
+    companyId: String
+    id: String
+    releaseYear: Int
+    title: String
+}
+
+type Mutation {
+    addGame(companyId: String, releaseYear: Int!, title: String!): Game
+    login(password: String!, username: String!): AuthPayload!
+    register(password: String!, username: String!): User!
+}
+
+type Query {
+    companies: [Company!]!
+    games: [Game!]!
+    me: User
+}
+
+type User {
+    id: ID!
+    role: String!
+    username: String!
+}
